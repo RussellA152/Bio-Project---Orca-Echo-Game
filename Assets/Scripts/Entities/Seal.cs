@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Orca INHERITS from Entity because its an entity
-public class Orca : Entity
+public class Seal : Entity
 {
     private void Start()
     {
@@ -13,7 +12,7 @@ public class Orca : Entity
     // Orca overrides speak method
     public override void Speak()
     {
-        Debug.Log("Orca Sounds!");
+        Debug.Log("Seal Sounds!");
         //throw new System.NotImplementedException();
     }
 
@@ -21,9 +20,7 @@ public class Orca : Entity
     {
         //custom particles play 
 
-        // I think base is the same as super.something() in java
 
         base.Die();
     }
-
 }
