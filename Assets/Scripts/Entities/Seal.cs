@@ -6,14 +6,12 @@ public class Seal : Entity
 {
     private void Start()
     {
-        Speak();
     }
 
     // Orca overrides speak method
-    public override void Speak()
+    public override void move()
     {
-        Debug.Log("Seal Sounds!");
-        //throw new System.NotImplementedException();
+
     }
 
     public override void Die()
