@@ -15,6 +15,8 @@ public class AIBehavior : MonoBehaviour
 
     [SerializeField] private float fleeDistance;
 
+    private NavMeshPath path;
+
     private enum State
     {
         Calm, //calm state is the default, slow moving AI
@@ -28,6 +30,7 @@ public class AIBehavior : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         state = State.Calm;
+
     }
 
     private void Update()
@@ -60,6 +63,7 @@ public class AIBehavior : MonoBehaviour
             // small fish and seals will use when they are near the player
             case State.Flee:
                 entityComponent.flee();
+                reachDestintation();
                 break;
 
             //lost orcas will use this function
@@ -71,7 +75,8 @@ public class AIBehavior : MonoBehaviour
 
     private void reachDestintation()
     {
-        agent.SetDestination(new Vector3(destination.position.x,destination.position.y,destination.position.z));
+        agent.SetDestination(new Vector3(destination.transform.position.x, destination.transform.position.y, destination.transform.position.z));
+
     }
 
     //this function will be called from AI Orcas
