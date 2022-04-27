@@ -28,6 +28,20 @@ public class Orca : Entity
         base.Die();
     }
 
+    //this method will probably never activate because the orca doesnt need to flee
+    public override void flee()
+    {
+
+    }
+    public override void calm()
+    {
+
+    }
+    public override void follow()
+    {
+
+    }
+
     private void getPpsProfiles()
     {
         volume.profile.TryGetSettings(out scan);
@@ -49,12 +63,13 @@ public class Orca : Entity
     {
         Vector3 move = new Vector3(0, 0, 0);
 
-        move += transform.right * Input.GetAxis("Vertical") * speed;
-        move += transform.forward * Input.GetAxis("Horizontal") * speed;
+        move += -transform.forward * Input.GetAxis("Vertical") * speed;
+        move += -transform.right * Input.GetAxis("Horizontal") * speed;
 
         if (Input.GetKey(KeyCode.LeftShift)) { move += new Vector3(0, -upSpeed, 0); }
         if (Input.GetKey(KeyCode.Space)) { move += new Vector3(0, downSpeed, 0); }
 
+        // multiplying by time.deltatime will make sure movement is NOT frame-dependent
         controller.Move(move * Time.deltaTime);
 
     }

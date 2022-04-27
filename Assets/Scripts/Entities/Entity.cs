@@ -15,5 +15,12 @@ public abstract class Entity : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
+
+    public abstract void flee();
+
+    public abstract void calm();
+
+    public abstract void follow();
+
 }
 
