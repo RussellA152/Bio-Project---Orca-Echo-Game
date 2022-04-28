@@ -39,10 +39,7 @@ public class AIBehavior : MonoBehaviour
     public void setOrcaState()
     {
         if (distance_from_player > fleeDistance) { changeState(State.Calm); }
-        else {
-            agent.ResetPath();
-            changeState(State.Follow);
-        }
+        else { changeState(State.Follow); }
     }
     public void setNonOrcaState()
     {
