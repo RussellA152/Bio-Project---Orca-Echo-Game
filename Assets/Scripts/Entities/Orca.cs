@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
 //Orca INHERITS from Entity because its an entity
-public class Orca : Entity
+public class Orca : MonoBehaviour
 {
     private CharacterController controller;
     private PostProcessVolume volume;
@@ -18,29 +18,7 @@ public class Orca : Entity
     }
 
     // Orca overrides speak method
-
-    public override void Die()
-    {
-        //custom particles play 
-
-        // I think base is the same as super.something() in java
-
-        base.Die();
-    }
-
     //this method will probably never activate because the orca doesnt need to flee
-    public override void flee()
-    {
-
-    }
-    public override void calm()
-    {
-
-    }
-    public override void follow()
-    {
-
-    }
 
     private void getPpsProfiles()
     {
@@ -59,7 +37,7 @@ public class Orca : Entity
         moveScanOrigin();
         scanToggle();
     }
-    public override void move()
+    public void move()
     {
         Vector3 move = new Vector3(0, 0, 0);
 
@@ -88,6 +66,11 @@ public class Orca : Entity
         {
             scan.active = false;
         }
+    }
+
+    public float getSpeed()
+    {
+        return speed;
     }
 
 }

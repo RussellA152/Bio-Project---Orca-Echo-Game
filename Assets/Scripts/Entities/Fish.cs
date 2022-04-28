@@ -5,17 +5,11 @@ using UnityEngine.AI;
 
 public class Fish : Entity
 {
-    [SerializeField] private float speed;
-    private float original_speed;
-    private float flee_speed;
     private NavMeshAgent agent;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.speed = speed;
-        original_speed = speed;
-        flee_speed = speed * 3;
     }
 
     // Fish overrides speak method
@@ -31,17 +25,8 @@ public class Fish : Entity
         base.Die();
     }
 
-    public override void flee()
+    public override void changeSpeed(float speed)
     {
-        agent.speed = flee_speed;
-    }
-    public override void calm()
-    {
-        agent.speed = original_speed;
-    }
-
-    public override void follow()
-    {
-
+        agent.speed = speed;
     }
 }

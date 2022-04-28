@@ -33,17 +33,8 @@ public class Seal : Entity
         base.Die();
     }
 
-    public override void flee()
+    public override void changeSpeed(float speed)
     {
-        agent.speed = flee_speed;
-    }
-    public override void calm()
-    {
-        agent.speed = original_speed;
-    }
-
-    public override void follow()
-    {
-
+        agent.speed = speed;
     }
 }

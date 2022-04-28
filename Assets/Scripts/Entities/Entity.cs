@@ -7,6 +7,7 @@ using UnityEngine;
 // Entity is an abstract class so it cannot be placed on an enemy
 public abstract class Entity : MonoBehaviour
 {
+
     //Speak is an abstract method so it wont have a body and it must be overriden
     public abstract void move();
 
@@ -16,11 +17,7 @@ public abstract class Entity : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public abstract void flee();
-
-    public abstract void calm();
-
-    public abstract void follow();
+    public abstract void changeSpeed(float speed);
 
 }
 
