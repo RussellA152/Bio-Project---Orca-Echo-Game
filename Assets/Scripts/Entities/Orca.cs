@@ -9,12 +9,19 @@ public class Orca : MonoBehaviour
     private CharacterController controller;
     private PostProcessVolume volume;
     private PostProcessingScan scan;
+    private Transform camera;
 
-    [SerializeField] float speed, upSpeed, downSpeed;
+    private float turnSmoothVelocity;
+
+    [SerializeField] float speed, upSpeed, downSpeed, turnSmoothing;
     private void Start()
     {
         getComponents();
         getPpsProfiles();
+
+        Cursor.lockState = CursorLockMode.Locked;
+
+        camera = GetComponentInChildren<Camera>().transform;
     }
 
     // Orca overrides speak method
@@ -39,16 +46,26 @@ public class Orca : MonoBehaviour
     }
     public void move()
     {
-        Vector3 move = new Vector3(0, 0, 0);
 
-        move += -transform.forward * Input.GetAxis("Vertical") * speed;
-        move += -transform.right * Input.GetAxis("Horizontal") * speed;
+        float xAxis = Input.GetAxisRaw("Horizontal");
+        float yAxis = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKey(KeyCode.LeftShift)) { move += new Vector3(0, -upSpeed, 0); }
-        if (Input.GetKey(KeyCode.Space)) { move += new Vector3(0, downSpeed, 0); }
+        Vector3 move = new Vector3(xAxis, 0f, yAxis).normalized;
+
+        if (Input.GetKey(KeyCode.LeftShift)) { controller.Move(new Vector3(0, -upSpeed, 0) * Time.deltaTime); }
+        if (Input.GetKey(KeyCode.Space)) { controller.Move(new Vector3(0, downSpeed, 0) * Time.deltaTime); }
 
         // multiplying by time.deltatime will make sure movement is NOT frame-dependent
-        controller.Move(move * Time.deltaTime);
+        if (move.magnitude >= 0.1f)
+        {
+            float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg + camera.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothing);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+
+            Vector3 direction = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            controller.Move(direction.normalized * speed * Time.deltaTime);
+        }
 
     }
 
