@@ -53,7 +53,7 @@ public class Orca : MonoBehaviour
         Vector3 move = new Vector3(xAxis, 0f, yAxis).normalized;
 
         if (Input.GetKey(KeyCode.LeftShift)) { controller.Move(new Vector3(0, -upSpeed, 0) * Time.deltaTime); }
-        if (Input.GetKey(KeyCode.Space)) { controller.Move(new Vector3(0, downSpeed, 0) * Time.deltaTime); }
+        else if (Input.GetKey(KeyCode.Space)) { controller.Move(new Vector3(0, downSpeed, 0) * Time.deltaTime); }
 
         // multiplying by time.deltatime will make sure movement is NOT frame-dependent
         if (move.magnitude >= 0.1f)
