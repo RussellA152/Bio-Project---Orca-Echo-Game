@@ -79,6 +79,7 @@ public class Orca : MonoBehaviour
         if (Input.GetKey(KeyCode.Tab))
         {
             scan.active = true;
+            
         } else
         {
             scan.active = false;
