@@ -7,6 +7,5 @@ public class testText : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
-        TextPrompt.instance.ChangeText("Testing text");
     }
 }

@@ -113,7 +113,7 @@ MonoBehaviour:
     value: {x: -119.5, y: -21.6, z: 3.8}
   _Colour:
     overrideState: 1
-    value: {r: 0.22745098, g: 0.22745098, b: 0.22745098, a: 0.54509807}
+    value: {r: 0, g: 0.5754717, b: 0.036184035, a: 0.54509807}
   _Power:
     overrideState: 1
     value: 1.6

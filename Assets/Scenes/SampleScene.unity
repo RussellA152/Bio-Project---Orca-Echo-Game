@@ -14,8 +14,8 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -860,7 +860,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8911564, y: 1}
+    m_SensorSize: {x: 2.0068307, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2273,6 +2273,7 @@ GameObject:
   - component: {fileID: 1063225238}
   - component: {fileID: 1063225243}
   - component: {fileID: 1063225244}
+  - component: {fileID: 1063225245}
   m_Layer: 0
   m_Name: Fish Test Object (following player)
   m_TagString: Untagged
@@ -2350,6 +2351,19 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &1063225245
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063225237}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1272334815
 GameObject:
   m_ObjectHideFlags: 3
@@ -2675,7 +2689,6 @@ GameObject:
   - component: {fileID: 1411552978}
   - component: {fileID: 1411552977}
   - component: {fileID: 1411552976}
-  - component: {fileID: 1411552979}
   - component: {fileID: 1411552980}
   m_Layer: 0
   m_Name: Camera
@@ -2812,19 +2825,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &1411552979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411552974}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 417226c0ec10f8f438ae24dade3ff3ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensitivity: 1
 --- !u!114 &1411552980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3106,7 +3106,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8911564, y: 1}
+    m_SensorSize: {x: 2.0068307, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3311,7 +3311,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8911564, y: 1}
+    m_SensorSize: {x: 2.0068307, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4273,9 +4273,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6dbac9ec74d7dc4cb2db6e678f27976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
-  upSpeed: 7
-  downSpeed: 7
+  speed: 20
+  upSpeed: 4
+  downSpeed: 4
   turnSmoothing: 0.1
 --- !u!114 &2043832520
 MonoBehaviour:
@@ -4571,7 +4571,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8911564, y: 1}
+    m_SensorSize: {x: 2.0068307, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4583,8 +4583,8 @@ MonoBehaviour:
     Value: 0.5
     m_SpeedMode: 0
     m_MaxSpeed: 20
-    m_AccelTime: 0.2
-    m_DecelTime: 0.2
+    m_AccelTime: 0.05
+    m_DecelTime: 0.05
     m_InputAxisName: Mouse Y
     m_InputAxisValue: 0
     m_InvertInput: 1
@@ -4607,8 +4607,8 @@ MonoBehaviour:
     Value: 0
     m_SpeedMode: 0
     m_MaxSpeed: 600
-    m_AccelTime: 0.2
-    m_DecelTime: 0.2
+    m_AccelTime: 0.05
+    m_DecelTime: 0.05
     m_InputAxisName: Mouse X
     m_InputAxisValue: 0
     m_InvertInput: 0

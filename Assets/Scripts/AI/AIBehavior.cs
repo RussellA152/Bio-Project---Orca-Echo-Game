@@ -18,7 +18,8 @@ public class AIBehavior : MonoBehaviour
     {
         Calm, //calm state is the default, slow moving AI
         Flee, //flee state is a faster moving AI 
-        Follow //follow state is for the lost orcas to follow the player
+        Follow, //follow state is for the lost orcas to follow the player
+        Pulse
     }
 
     private void Start()
@@ -82,5 +83,10 @@ public class AIBehavior : MonoBehaviour
     private void followPlayer()
     {
         agent.SetDestination(new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z));
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Scanned");
     }
 }
