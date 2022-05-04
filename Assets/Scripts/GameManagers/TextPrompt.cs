@@ -30,8 +30,6 @@ public class TextPrompt : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(canChangeText);
-
         //press e to display next prompt
         if (Input.GetKeyDown(KeyCode.E)) { canChangeText = true; }
         else { canChangeText = false; }
