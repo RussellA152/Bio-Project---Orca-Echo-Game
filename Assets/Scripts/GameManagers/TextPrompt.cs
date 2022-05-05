@@ -57,6 +57,7 @@ public class TextPrompt : MonoBehaviour
 
         prompt.enabled = false;
 
+        //close UI
         EventSystem.current.promptEnd();
 
     }

@@ -9,15 +9,14 @@ public class NPCOrca : MonoBehaviour
 
     List<GameObject> textList = new List<GameObject>();
 
-    private float dist;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //check condition for allow interactions within certain distance
         float playerDistance = Vector3.Distance(transform.position, player.transform.position);
         if (playerDistance <= interactDistance) { handleInteract(); }
     }
@@ -25,6 +24,7 @@ public class NPCOrca : MonoBehaviour
     private void handleInteract()
     {
         if (Input.GetKey(KeyCode.F)) {
+            //Displays UI
             EventSystem.current.orcaPickup();
             Destroy(gameObject);
         }
@@ -32,39 +32,26 @@ public class NPCOrca : MonoBehaviour
 
     private void OnDestroy()
     {
+        //gets header and body text fields
         textList.Add(GameObject.FindGameObjectWithTag("Info"));
         textList.Add(GameObject.FindGameObjectWithTag("Header"));
         
 
         foreach (GameObject t in textList)
         {
-            textHandler(t);
+            //set text for each text field
+            setText(t);
         }
 
+        //start all prompts when text has been set
         EventSystem.current.promptStart();
     }
 
-    private void textHandler(GameObject t)
-    {
-        switch(t.tag)
-        {
-            case("Header"):
-                setText(t);
-                break;
-
-            case ("Info"):
-                setText(t);
-                break;
-
-            default:
-                Debug.Log("Unknown Object");
-                break;
-        }
-    }
-
-    //Each NPC should have unique text to retrieve; pass it in from case
     private void setText(GameObject t)
     {
+        //can check tag to add unique prompts
+        //ex. if tag == "header" { add header text here }
+        //num of headers added == num of info added
         TextPrompt script = t.GetComponent<TextPrompt>();
         script.clearPrompt();
         script.addPrompt("asdf");
