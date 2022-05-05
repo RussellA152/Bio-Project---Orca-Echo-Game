@@ -26,12 +26,6 @@ public class TextPrompt : MonoBehaviour
         EventSystem.current.onPromptStart += startPrompts;
     }
 
-    public void clearPrompt()
-    {
-        prompts.Clear();
-        prompt.text = "";
-    }
-
     //function call to queue in prompts
     public void addPrompt(string text)
     {

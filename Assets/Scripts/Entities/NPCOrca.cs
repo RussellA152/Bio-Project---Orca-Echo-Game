@@ -53,7 +53,6 @@ public class NPCOrca : MonoBehaviour
         //ex. if tag == "header" { add header text here }
         //num of headers added == num of info added
         TextPrompt script = t.GetComponent<TextPrompt>();
-        script.clearPrompt();
         script.addPrompt("asdf");
         script.addPrompt("asdf1");
         script.addPrompt("asdf2");
