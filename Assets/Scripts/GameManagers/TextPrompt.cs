@@ -9,24 +9,9 @@ public class TextPrompt : MonoBehaviour
 
     //global singleton instance of the TextPrompt so that it can be accessed anywhere
     // any class can retrieve it, but only this class should be allowed to set it
-    public static TextPrompt instance { get; private set; }
-
     private TextMeshProUGUI prompt;
     private bool canChangeText;
     private Queue prompts = new Queue();
-
-    private void Awake()
-    {
-        //if there is an instance, and its not this one, delete this one
-        if(instance != null && instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            instance = this;
-        }
-    }
 
     private void Update()
     {
@@ -38,6 +23,13 @@ public class TextPrompt : MonoBehaviour
     private void Start()
     {
         prompt = GetComponent<TextMeshProUGUI>();
+        EventSystem.current.onPromptStart += startPrompts;
+    }
+
+    public void clearPrompt()
+    {
+        prompts.Clear();
+        prompt.text = "";
     }
 
     //function call to queue in prompts
@@ -54,14 +46,18 @@ public class TextPrompt : MonoBehaviour
     IEnumerator DisplayTextBox(Queue prompts)
     {
         prompt.enabled = true;
+        
 
         while (prompts.Count != 0)
         {
+            canChangeText = false;
             prompt.text = prompts.Dequeue().ToString();
             yield return new WaitUntil(canClosePrompt);
-            canChangeText = false;
         }
+
         prompt.enabled = false;
+
+        EventSystem.current.promptEnd();
 
     }
 

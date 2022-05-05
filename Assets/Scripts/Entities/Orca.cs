@@ -90,5 +90,4 @@ public class Orca : MonoBehaviour
     {
         return speed;
     }
-
 }
