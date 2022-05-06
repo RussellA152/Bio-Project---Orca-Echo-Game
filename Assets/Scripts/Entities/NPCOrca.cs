@@ -6,6 +6,7 @@ public class NPCOrca : MonoBehaviour
 {
     [SerializeField] Transform player;
     [SerializeField] float interactDistance;
+    [SerializeField] TextAsset headers, body;
 
     List<GameObject> textList = new List<GameObject>();
 
@@ -40,22 +41,38 @@ public class NPCOrca : MonoBehaviour
         foreach (GameObject t in textList)
         {
             //set text for each text field
-            setText(t);
+            handleTextChange(t);
         }
 
         //start all prompts when text has been set
         EventSystem.current.promptStart();
     }
 
-    private void setText(GameObject t)
+    private void setText(GameObject t, TextAsset text)
     {
         //can check tag to add unique prompts
         //ex. if tag == "header" { add header text here }
         //num of headers added == num of info added
         TextPrompt script = t.GetComponent<TextPrompt>();
-        script.addPrompt("asdf");
-        script.addPrompt("asdf1");
-        script.addPrompt("asdf2");
+        string[] textList = text.ToString().Split('+');
+        foreach (string s in textList)
+        {
+            script.addPrompt(s);
+        }
+    }
 
+    private void handleTextChange(GameObject t)
+    {
+        switch (t.tag)
+        {
+            case ("Header"):
+                setText(t, headers);
+                break;
+            case ("Info"):
+                setText(t, body);
+                break;
+            default:
+                break;
+        }
     }
 }
