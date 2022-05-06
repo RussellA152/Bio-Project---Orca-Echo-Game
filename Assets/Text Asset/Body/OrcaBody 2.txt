@@ -1,5 +1,5 @@
-Orcas perform echolocation by producing certain sounds that allow for navigation and communication underwater
-These sounds can help orcas locate food sources and other orcas in areas of dark water+Orcas can produce sounds through clicks, pulsed calls, and jaw claps
-Clicks primarily used for navigation in dark areas
-Whistles and calls are mostly used for social interaction
+Orcas perform echolocation by producing certain sounds that allow for navigation and communication underwater.
+These sounds can help orcas locate food sources and other orcas in areas of dark water+Orcas can produce sounds through clicks, pulsed calls, and jaw claps.
+Clicks primarily used for navigation in dark areas.
+Whistles and calls are mostly used for social interaction.
 

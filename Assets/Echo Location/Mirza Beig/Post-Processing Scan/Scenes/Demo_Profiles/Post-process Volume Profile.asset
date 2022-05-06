@@ -119,13 +119,13 @@ MonoBehaviour:
     value: 7.99
   _Tiling:
     overrideState: 1
-    value: 0.03
+    value: 0.004
   _Speed:
     overrideState: 1
-    value: 0.25
+    value: 0.5
   _Mask:
     overrideState: 1
-    value: 0.005
+    value: 0.002
   _MaskHardness:
     overrideState: 1
     value: 0
