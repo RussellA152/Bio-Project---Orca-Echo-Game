@@ -9,13 +9,16 @@ public class NPCOrca : MonoBehaviour
     [SerializeField] float interactDistance;
     [SerializeField] TextAsset headers, body;
     [SerializeField] Sprite img;
+    [SerializeField] byte red, green, blue, alpha;
 
-    private Image image;
+    private Image image, colorstrip;
+    private Color color;
 
     List<GameObject> textList = new List<GameObject>();
 
     void Start()
     {
+        color = new Color32(red, green, blue, alpha);
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -42,7 +45,9 @@ public class NPCOrca : MonoBehaviour
         textList.Add(GameObject.FindGameObjectWithTag("Header"));
 
         image = GameObject.FindGameObjectWithTag("Image").GetComponent<Image>();
+        colorstrip = GameObject.FindGameObjectWithTag("Color").GetComponent<Image>();
 
+        colorstrip.color = color;
         image.sprite = img;
         
 
