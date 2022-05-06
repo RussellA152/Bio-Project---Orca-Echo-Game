@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPCOrca : MonoBehaviour
 {
     [SerializeField] Transform player;
     [SerializeField] float interactDistance;
     [SerializeField] TextAsset headers, body;
+    [SerializeField] Sprite img;
+
+    private Image image;
 
     List<GameObject> textList = new List<GameObject>();
 
@@ -36,6 +40,10 @@ public class NPCOrca : MonoBehaviour
         //gets header and body text fields
         textList.Add(GameObject.FindGameObjectWithTag("Info"));
         textList.Add(GameObject.FindGameObjectWithTag("Header"));
+
+        image = GameObject.FindGameObjectWithTag("Image").GetComponent<Image>();
+
+        image.sprite = img;
         
 
         foreach (GameObject t in textList)
