@@ -4646,7 +4646,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: HEADER DEEZ NUTS GANDHI
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7337,18 +7337,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS
-    DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS
-    DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS
-    DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS
-    DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS
-    DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS
-    DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS
-    DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS
-    DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS
-    DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS
-    DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS DEEZ NUTS
-    DEEZ NUTS DEEZ NUTS DEEZ NUTS '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7375,7 +7364,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 32
   m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10115,7 +10104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039704386}
   m_LocalRotation: {x: -0, y: 0.7541565, z: -0, w: 0.65669477}
-  m_LocalPosition: {x: 176.51, y: -5.45, z: -243.1}
+  m_LocalPosition: {x: 135, y: -14.4, z: -185.8}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10143,7 +10132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1063225238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10267,6 +10256,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 550347242}
     m_Modifications:
+    - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
+      propertyPath: blue
+      value: 255
+      objectReference: {fileID: 0}
+    - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
+      propertyPath: alpha
+      value: 255
+      objectReference: {fileID: 0}
     - target: {fileID: 4707170750324898341, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -12169,9 +12166,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 0d772b3b48d88364b9defb6ccd8360f2, type: 3}
     - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
+      propertyPath: red
+      value: 255
+      objectReference: {fileID: 0}
+    - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
       propertyPath: body
       value: 
       objectReference: {fileID: 4900000, guid: 586930badf1bd854d9fd053f8139d1ea, type: 3}
+    - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
+      propertyPath: alpha
+      value: 255
+      objectReference: {fileID: 0}
     - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
       propertyPath: headers
       value: 
@@ -17183,9 +17188,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 52e9a3a667a402647a0882fcdd88e145, type: 3}
     - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
+      propertyPath: red
+      value: 255
+      objectReference: {fileID: 0}
+    - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
       propertyPath: body
       value: 
       objectReference: {fileID: 4900000, guid: 586930badf1bd854d9fd053f8139d1ea, type: 3}
+    - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
+      propertyPath: alpha
+      value: 255
+      objectReference: {fileID: 0}
     - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
       propertyPath: headers
       value: 
@@ -17573,6 +17586,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 550347242}
     m_Modifications:
+    - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
+      propertyPath: blue
+      value: 255
+      objectReference: {fileID: 0}
+    - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
+      propertyPath: alpha
+      value: 255
+      objectReference: {fileID: 0}
     - target: {fileID: 4707170750324898341, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -19431,9 +19452,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 52e9a3a667a402647a0882fcdd88e145, type: 3}
     - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
+      propertyPath: red
+      value: 167
+      objectReference: {fileID: 0}
+    - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
+      propertyPath: blue
+      value: 157
+      objectReference: {fileID: 0}
+    - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
       propertyPath: body
       value: 
       objectReference: {fileID: 4900000, guid: 1d6d76d60e777d743805c8b4b93cca24, type: 3}
+    - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
+      propertyPath: alpha
+      value: 255
+      objectReference: {fileID: 0}
+    - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
+      propertyPath: green
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
       propertyPath: image
       value: 
