@@ -55757,7 +55757,7 @@ PrefabInstance:
     - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
       propertyPath: img
       value: 
-      objectReference: {fileID: 21300000, guid: 0d772b3b48d88364b9defb6ccd8360f2, type: 3}
+      objectReference: {fileID: 21300000, guid: 1a859c8390d7b0747a682ad5c69e814f, type: 3}
     - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
       propertyPath: red
       value: 255
@@ -66057,7 +66057,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0d772b3b48d88364b9defb6ccd8360f2, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -77530,7 +77530,7 @@ PrefabInstance:
     - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
       propertyPath: img
       value: 
-      objectReference: {fileID: 21300000, guid: 52e9a3a667a402647a0882fcdd88e145, type: 3}
+      objectReference: {fileID: 21300000, guid: 5fda0d8a3eda9914eb01def432fae14a, type: 3}
     - target: {fileID: -7869174329838750321, guid: efcce6867ec20b2448c87d7e52ef48a6, type: 3}
       propertyPath: red
       value: 0
@@ -82642,7 +82642,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 3.23, y: 1.81, z: 5.56}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2043832515
 MeshRenderer:
