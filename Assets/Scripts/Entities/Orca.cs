@@ -76,7 +76,7 @@ public class Orca : MonoBehaviour
 
     public void scanToggle()
     {
-        if (Input.GetKey(KeyCode.Tab))
+        if (Input.GetKey(KeyCode.Q))
         {
             scan.active = true;
             
